@@ -1,0 +1,19 @@
+{
+  "name": "votesc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compile.js",
+  "directories": {
+    "test": "mocha"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.1.1",
+    "solc": "^0.4.23",
+    "web3": "^1.0.0-beta.26"
+  }
+}
