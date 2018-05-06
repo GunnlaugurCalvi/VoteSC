@@ -3,8 +3,7 @@ pragma solidity ^0.4.17;
 contract ElectionCreation {
     address[] public deployedBallots;
     
-    constructor (bytes32[] candidates, bytes32[] district) public {
-        
+    function createElection(bytes32[] candidates, bytes32[] district) public {
         for(uint i = 0; i < district.length; i++){
             address newBallot = new Ballot(candidates, district[i], msg.sender);
             deployedBallots.push(newBallot);
@@ -26,7 +25,6 @@ contract Ballot {
         
     }
 	
-	// A dynamically-sized array of `Proposal` structs.
     Proposal[] public proposals;
     address public chairperson;
     bytes32 public votingDistrict;
