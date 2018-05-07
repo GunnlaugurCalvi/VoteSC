@@ -6,12 +6,15 @@ import Layout from '../components/Layout';
 
 class voteIndex extends Component {
     
-    static async getInitialProps() {
+    // static async getInitialProps() {
 
-        const ballots = await election.methods.getDeployedBallots().call();
-        return { ballots };
+    //     const ballots = await election.methods.getDeployedBallots().call();
+    //     return { ballots };
+    // }
+    async componentDidMount() {
+        const districtAddress = await ballot.methods.chairPerson().call();
+        
     }
-
     render () {
         return (
             <Layout>
