@@ -22,7 +22,6 @@ contract Ballot {
     struct Proposal {
         bytes32 name;
         uint voteCount;
-        
     }
 	
     Proposal[] public proposals;
